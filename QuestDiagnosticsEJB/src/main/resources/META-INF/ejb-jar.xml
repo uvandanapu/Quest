@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejb-jar PUBLIC '-//Sun Microsystems, Inc.//DTD Enterprise JavaBeans 2.0//EN' 'http://java.sun.com/dtd/ejb-jar_2_0.dtd'>
+<ejb-jar>
+	<display-name>QuestDiagnosticsEJB</display-name>
+	<enterprise-beans>
+		<message-driven>
+			<ejb-name>MyListener</ejb-name>
+			<ejb-class>com.quest.questDiagnosticsEJB.service.MyListener</ejb-class>
+			<transaction-type>Container</transaction-type>
+			<message-driven-destination>
+				<destination-type>javax.jms.Queue</destination-type>
+			</message-driven-destination>
+			<env-entry>
+				<description>This is a bean listening on a queue.</description>
+				<env-entry-name>listen_type</env-entry-name>
+				<env-entry-type>java.lang.String</env-entry-type>
+				<env-entry-value>queue</env-entry-value>
+			</env-entry>
+		</message-driven>
+
+
+	</enterprise-beans>
+
+</ejb-jar>

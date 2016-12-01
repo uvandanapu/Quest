@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-ejb-jar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.bea.com/ns/weblogic/weblogic-ejb-jar http://www.bea.com/ns/weblogic/weblogic-ejb-jar/1.0/weblogic-ejb-jar.xsd"
+                  xmlns="http://www.bea.com/ns/weblogic/weblogic-ejb-jar">
+  <weblogic-enterprise-bean>
+    <ejb-name>MyListner</ejb-name>
+    <message-driven-descriptor>
+        <destination-jndi-name>jms/TestJMSQueue</destination-jndi-name>
+        </message-driven-descriptor>
+         <jndi-name>jms/TestJMSQueue</jndi-name>
+  </weblogic-enterprise-bean>                  
+</weblogic-ejb-jar>

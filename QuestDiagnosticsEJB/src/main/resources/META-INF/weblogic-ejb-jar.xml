@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE weblogic-ejb-jar
+ PUBLIC '-//BEA Systems, Inc.//DTD WebLogic 8.1.0 EJB//EN'
+ 'http://www.bea.com/servers/wls810/dtd/weblogic-ejb-jar.dtd'>
+<weblogic-ejb-jar>
+	<!--weblogic-version:12.2.1 -->
+	<weblogic-enterprise-bean>
+		<!--options:DESTINATION_JNDI -->
+		<ejb-name>MyListener</ejb-name>
+		<message-driven-descriptor>
+			<pool>
+				<max-beans-in-free-pool>10</max-beans-in-free-pool>
+				<initial-beans-in-free-pool>2</initial-beans-in-free-pool>
+			</pool>
+			<destination-jndi-name>jms/TestJMSQueue</destination-jndi-name>
+
+		</message-driven-descriptor>
+		<jndi-name>TestJMSQueue</jndi-name>
+	</weblogic-enterprise-bean>
+	<!-- <component-factory-class-name>org.springframework.jee.interfaces.SpringComponentFactory</component-factory-class-name> -->
+
+</weblogic-ejb-jar>
